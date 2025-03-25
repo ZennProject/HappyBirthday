@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy birthday</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <img id="profilePic" class="profile-pic" src="" alt="Foto Pengunjung">
+        <h1 id="welcomeText">Selamat Datang</h1>
+        <div class="balloons" id="balloonContainer"></div>
+        <img src="img/kue1.png" class="cake" alt="Kue Ulang Tahun">
+    </div>
+    
+    <div class="popup-container" id="popup">
+        <div class="popup">
+            <p>Masukkan nama panggilan kamu</p>
+            <input type="text" id="namaInput" onkeydown="handleKeyPress(event)">
+            <button onclick="checkName()">OK</button>
+        </div>
+    </div>
+
+    <div id="messageContainer">
+        <p>Hai, Apa kabar??</p>
+        <!-- <label for="messageInput">Tulis pesan:</label> -->
+        <input type="text" id="messageInput" placeholder="Masukkan pesan Anda di sini">
+        <button onclick="sendMessage()">Kirim</button>
+    </div>
+
+    <audio id="birthdaySong" src="audio/happy_birthday.mp3"></audio>
+    <footer><p>&copy; 2025 <span class="author">Alvian's</span></p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fdebd0;
+    text-align: center;
+    overflow-y: auto;
+    flex-direction: column;
+}
+.container {
+    position: relative;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    padding-top: 200px;
+}
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: none;
+    margin-bottom: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.balloons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.balloon {
+    width: 60px;
+    height: 80px;
+    background-color: red;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: float 4s infinite ease-in-out alternate;
+    position: relative;
+    border: 3px solid lime;
+}
+.balloon::after {
+    content: '';
+    width: 2px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 2px solid black;
+    border-radius: 10px;
+    height: 60px;
+    display: block;
+}
+.balloon:nth-child(odd) { animation-duration: 3s; }
+.balloon:nth-child(even) { animation-duration: 5s; }
+@keyframes float {
+    0% { transform: translateY(20px); }
+    100% { transform: translateY(-20px); }
+}
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.cake {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 20px;
+}
+input, button {
+    font-size: 16px;
+    padding: 10px;
+}
+
+#messageContainer {
+    display: none;
+    /* text-align: center; */
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 3px 0;
+}
+.author {
+    color: yellow;
+}
