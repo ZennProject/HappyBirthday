@@ -5,7 +5,7 @@ let audio = document.getElementById("birthdaySong");
 function checkName() {
     let nama = document.getElementById("namaInput").value;
     let profilePic = document.getElementById("profilePic");
-}
+
     if (daftarNama.includes(nama)) {
         document.getElementById("welcomeText").textContent = "Happy Birthday, " + nama + "!";
         document.getElementById("popup").style.display = "none";
@@ -17,7 +17,7 @@ function checkName() {
     } else {
         alert("Nama tidak ditemukan dalam database! Coba lagi.");
     }
-
+}
 
 function handleKeyPress(event) {
     if (event.key === "Enter") {
