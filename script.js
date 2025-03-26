@@ -17,7 +17,7 @@ function checkName() {
     } else {
         alert("Nama tidak ditemukan dalam database! Coba lagi.");
     }
-}
+
 
 function handleKeyPress(event) {
     if (event.key === "Enter") {
